@@ -532,7 +532,7 @@ func main() {
 		fmt.Println("done")
 	}
 
-	for i := range 5 {
+	for i := range kvs {
 		fmt.Println(i)
 	}
 
@@ -1559,6 +1559,23 @@ selesaiLoop:
 
 		nilai variable number berubah menjadi 10 karena perubahan yang terjadi pada fungsi change() yang mengubah nilai asli dari variable number
 	*/
+	// latihan Pointer
+	var a = 42
+	var p *int = &a
+	var b = 100
+	var p2 *int = &b
+	b = 200
+	c := []int{10, 20, 30, 40, 50}
+
+	for i := 0; i < len(c); i++ {
+		fmt.Println(c[i])
+	}
+
+	fmt.Println(a)
+	fmt.Println(&a)
+	fmt.Println(p)
+	fmt.Println(b)
+	fmt.Println(p2)
 
 }
 func change(original *int, value int) {
